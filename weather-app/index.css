@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #202020;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+   WEATHER CARD
+========================= */
+
+.weather-card {
+    width: 590px;
+    min-height: 735px;
+
+    padding: 50px 44px;
+
+    border-radius: 25px;
+
+    background: linear-gradient(
+        145deg,
+        #00e6b2,
+        #25b8ad 50%,
+        #5c5a91
+    );
+
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search {
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+}
+
+
+.search input {
+    flex: 1;
+
+    height: 75px;
+
+    padding: 0 30px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 50px;
+
+    background: #ecffff;
+
+    color: #555;
+
+    font-size: 23px;
+}
+
+
+.search input::placeholder {
+    color: #666;
+}
+
+
+/* Search button */
+
+.search button {
+    width: 75px;
+    height: 75px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #ecffff;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s;
+}
+
+
+.search button:hover {
+    transform: scale(1.06);
+}
+
+
+/* =========================
+   CSS SEARCH ICON
+========================= */
+
+.search-icon {
+    width: 34px;
+    height: 34px;
+
+    border: 4px solid #666;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    display: block;
+}
+
+
+.search-icon::after {
+    content: "";
+
+    position: absolute;
+
+    width: 16px;
+    height: 4px;
+
+    background: #666;
+
+    right: -12px;
+    bottom: -6px;
+
+    transform: rotate(45deg);
+
+    border-radius: 5px;
+}
+
+
+/* =========================
+   WEATHER
+========================= */
+
+.weather {
+    text-align: center;
+}
+
+
+/* =========================
+   WEATHER ICON
+========================= */
+
+.weather-icon {
+    height: 190px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 45px;
+
+    font-size: 135px;
+
+    line-height: 1;
+}
+
+
+/* =========================
+   TEMPERATURE
+========================= */
+
+.temp {
+    margin-top: 10px;
+
+    color: white;
+
+    font-size: 88px;
+
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+/* =========================
+   CITY
+========================= */
+
+.city {
+    margin-top: 28px;
+
+    color: white;
+
+    font-size: 48px;
+
+    font-weight: 400;
+}
+
+
+/* =========================
+   DETAILS
+========================= */
+
+.details {
+    margin-top: 75px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+
+.detail {
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: white;
+
+    text-align: left;
+}
+
+
+/* =========================
+   HUMIDITY ICON
+========================= */
+
+.humidity-icon {
+    width: 52px;
+
+    color: white;
+
+    font-size: 50px;
+
+    line-height: 1;
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================
+   WIND ICON
+========================= */
+
+.wind-icon {
+    width: 52px;
+
+    color: white;
+
+    font-size: 52px;
+
+    line-height: 1;
+}
+
+
+/* =========================
+   DETAILS TEXT
+========================= */
+
+.detail h3 {
+    color: white;
+
+    font-size: 30px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+
+.detail p {
+    margin-top: 4px;
+
+    color: white;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 15px;
+    }
+
+
+    .weather-card {
+        width: 100%;
+
+        min-height: 680px;
+
+        padding: 30px 20px;
+
+        border-radius: 22px;
+    }
+
+
+    .search {
+        gap: 12px;
+    }
+
+
+    .search input {
+        height: 62px;
+
+        padding: 0 20px;
+
+        font-size: 18px;
+    }
+
+
+    .search button {
+        width: 62px;
+        height: 62px;
+    }
+
+
+    .search-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+
+    .weather-icon {
+        height: 160px;
+
+        margin-top: 35px;
+
+        font-size: 105px;
+    }
+
+
+    .temp {
+        font-size: 70px;
+    }
+
+
+    .city {
+        font-size: 38px;
+    }
+
+
+    .details {
+        margin-top: 60px;
+
+        gap: 15px;
+    }
+
+
+    .detail {
+        gap: 5px;
+    }
+
+
+    .humidity-icon,
+    .wind-icon {
+        width: 40px;
+
+        font-size: 38px;
+    }
+
+
+    .detail h3 {
+        font-size: 20px;
+    }
+
+
+    .detail p {
+        font-size: 14px;
+    }
+
+}
